@@ -1,4 +1,6 @@
-{
+{   
+    "name": "App/",
+    "description": "unit testing",
     "require-dev": {
         "phpunit/phpunit": "^9"
     },
@@ -9,5 +11,6 @@
     },
     "scripts": {
         "test": "phpunit"
-    }
+    },
+        "license": "MIT"
 }
