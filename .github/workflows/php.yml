@@ -23,3 +23,6 @@ jobs:
 
     - name: Run tests
       run: ./vendor/bin/phpunit
+
+    - name: send codecov
+      run: bash <(curl -s https://codecov.io/bash) -t token
