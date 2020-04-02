@@ -13,12 +13,18 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - uses: php-actions/composer@v1
+    # - name: PHPUnit tests
+    #   uses: php-actions/phpunit@v1
+    #   with:
+    #     config: phpunit.xml
+    #     memory: 256M
 
     # - name: Validate composer.json and composer.lock
     #   run: composer validate
 
-    - name: Install dependencies
-      run: composer install 
+    # - name: Install dependencies
+    #   run: composer install 
 
     - name: Run tests
       run: ./vendor/bin/phpunit
