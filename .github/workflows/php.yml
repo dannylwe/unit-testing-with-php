@@ -13,6 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+
     - uses: php-actions/composer@v1
     # - name: PHPUnit tests
     #   uses: php-actions/phpunit@v1
@@ -22,4 +23,3 @@ jobs:
 
     - name: Run tests
       run: ./vendor/bin/phpunit
-
