@@ -40,7 +40,8 @@ class UserTest extends TestCase {
         $this->assertEquals($user->getEmail(), $email);
     }
 
-    public function testEmailValuesCorrect() {
+    /** @test */
+    public function check_email_vars_correct() {
         $email = 'danny@gmail.com';
         $user = new \App\Models\User;
         $user->setFirstName('Billy');
