@@ -32,4 +32,11 @@ class UserTest extends TestCase {
         $this->assertEquals($user->getFirstName(), 'Billy');
         $this->assertEquals($user->getLastName(), 'Armstring');
     }
+
+    public function testEmailAddressCanBeSet() {
+        $email = 'danny@gmail.com';
+        $user = new \App\Models\User;
+        $user->setEmail($email);
+        $this->assertEquals($user->getEmail(), $email);
+    }
 }
