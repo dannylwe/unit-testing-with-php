@@ -39,4 +39,20 @@ class UserTest extends TestCase {
         $user->setEmail($email);
         $this->assertEquals($user->getEmail(), $email);
     }
+
+    public function testEmailValuesCorrect() {
+        $email = 'danny@gmail.com';
+        $user = new \App\Models\User;
+        $user->setFirstName('Billy');
+        $user->setLastName('Armstring');
+        $user->setEmail($email);
+
+        $emailVars = $user->getEmailVariables();
+        
+        $this->assertArrayHasKey('full_name', $emailVars);
+        $this->assertArrayHasKey('email', $emailVars);
+        
+        $this->assertEquals($emailVars['full_name'], 'Billy Armstring');
+        $this->assertEquals($emailVars['email'], $email);
+    }
 }
