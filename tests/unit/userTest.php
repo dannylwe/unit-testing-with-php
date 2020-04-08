@@ -24,4 +24,12 @@ class UserTest extends TestCase {
         $user->setLastName('Armstring');
         $this->assertEquals($user->getFullName(), 'Billy Armstring');
     }
+
+    public function testFirstAndLastNameAreTrimmed() {
+        $user = new \App\Models\User;
+        $user->setFirstName('Billy     ');
+        $user->setLastName('     Armstring');
+        $this->assertEquals($user->getFirstName(), 'Billy');
+        $this->assertEquals($user->getLastName(), 'Armstring');
+    }
 }
