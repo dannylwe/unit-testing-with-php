@@ -12,5 +12,8 @@
     "scripts": {
         "test": "phpunit"
     },
-        "license": "MIT"
+        "license": "MIT",
+    "require": {
+        "setasign/fpdf": "^1.8"
+    }
 }
