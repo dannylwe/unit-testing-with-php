@@ -2,7 +2,7 @@
 
 namespace App\Calculator;
 
-class Addition {
+class Addition implements OpperationInterface {
 
     protected $operands;
     
