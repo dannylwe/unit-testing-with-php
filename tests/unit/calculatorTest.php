@@ -18,4 +18,19 @@ class AdditionTest extends TestCase {
         $addition->setOperands([]);
         $addition->calculate();
     }
+
+    public function addDataProvider() {
+        return array(
+            array(1, 4, 5),
+            array(-1, 4, 3),
+            array(-1, -1, -2),
+        );
+    }
+
+    /** @dataProvider adddataProvider */
+    public function testAddWithDataProvider($a, $b, $result) {
+        $addition = new \App\Calculator\Addition;
+        $addition->setOperands([$a, $b]);
+        $this->assertEquals($addition->calculate(), $result);
+    }
 }
